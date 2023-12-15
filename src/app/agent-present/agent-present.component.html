@@ -1,0 +1,32 @@
+<!-- <form class="form-horizontal" [formGroup]="suggestionForm"> -->
+<form class="form-horizontal">
+  <div class="form-group panel">
+    <div class="col-md-12">
+      <input
+        type="text"
+        class="form-control"
+        name="presentURL"
+        id="presentURL"
+        formControlName="presentURL"
+        style="width: 500px"
+      />
+    </div>
+    <br />
+    <button
+      type="button"
+      id="share-button"
+      (click)="startPresentSession()"
+      *ngIf="isShareScreen"
+    >
+      Share my Desktop
+    </button>
+    <button
+      id="end-button"
+      type="button"
+      (click)="resetPresentSession()"
+      *ngIf="isEnd"
+    >
+      End present session
+    </button>
+  </div>
+</form>
